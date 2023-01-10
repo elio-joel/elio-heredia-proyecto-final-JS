@@ -211,3 +211,28 @@ function actualizarNumerito() {
 
 }
 
+
+//  USO DE API //
+
+const API_URL = "https://jsonplaceholder.typicode.com";
+
+const HTMLResponse = document.querySelector("#app");
+const tpl = document.createElement("div");
+
+
+fetch(`${API_URL}/posts/1/comments`)
+    .then((response) => response.json())
+    .then((users) => {
+        users.forEach(user => {
+            let elem = document.createElement("li");
+            elem.appendChild(
+                document.createTextNode(`${user.email} ${user.name} ${user.body}`)
+                );
+                tpl.appendChild(elem);
+        });
+
+        HTMLResponse.appendChild(tpl);
+        
+    })
+    
+       

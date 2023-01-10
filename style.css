@@ -197,6 +197,23 @@ main {
     color: var(--clr-white);
 }
 
+.clientes {
+    margin-top: 13rem;
+    border: 2rem;
+    text-align: center;
+    
+
+}
+
+.comentarios-clientes {
+    margin: 4rem;
+    border: solid 2rem black;
+    text-align: center;
+    gap: 9rem;
+
+    
+}
+
 
 /** CARRITO  **/
 
